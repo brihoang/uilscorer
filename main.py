@@ -17,16 +17,16 @@ def already_correct(problem_name):
 def correct(problem_name):
 	create_scoreboard()
 	if not already_correct(problem_name):
-		board = open("./scorekeeping/scoreboard.txt", "w")
-		board.write(problem_name + " CORRECT")
+		board = open("./scorekeeping/scoreboard.txt", "a")
+		board.write(problem_name + " CORRECT\n")
 		board.close()
 
 
 def incorrect(problem_name):
 	create_scoreboard()
 	if not already_correct(problem_name):
-		board = open("./scorekeeping/scoreboard.txt", "w")
-		board.write(problem_name + " INCORRECT")
+		board = open("./scorekeeping/scoreboard.txt", "a")
+		board.write(problem_name + " INCORRECT\n")
 		board.close()
 
 java_file_name = str(sys.argv[1]) #ony file name since other things are similarly named. 
